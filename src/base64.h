@@ -85,7 +85,7 @@ size_t base64_decode_fast(char* const dst, const size_t dstlen,
   size_t k = 0;
   while (i < max_i && k < max_k) {
     const uint32_t v =
-        unbase64(src[i + 0]) << 24 |
+        unbase64(src[i + 0]) << 24U |
         unbase64(src[i + 1]) << 16 |
         unbase64(src[i + 2]) << 8 |
         unbase64(src[i + 3]);

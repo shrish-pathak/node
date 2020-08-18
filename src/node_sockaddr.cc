@@ -302,7 +302,7 @@ bool in_network_ipv6_ipv4(
     return false;
 
   ptr += sizeof(mask);
-  uint32_t check = ptr[0] << 24 | ptr[1] << 16 | ptr[2] << 8 | ptr[3];
+  uint32_t check = ptr[0] << 24U | ptr[1] << 16 | ptr[2] << 8 | ptr[3];
 
   return (check & m) == (htonl(net_in->sin_addr.s_addr) & m);
 }
